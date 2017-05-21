@@ -42,3 +42,24 @@ Throttling and Debouncing in JavaScript
 The Difference Between Throttling and Debouncing
 Examples of Throttling and Debouncing
 Remy Sharp’s blog post on Throttling function calls
+
+
+
+
+
+
+
+Responses:
+
+
+Dylan:
+Doesn’t expecting the unexpected make the unexpected expected?
+
+
+
+Soros:
+Man is the only living being who cuts trees, makes paper, and writes “SAVE TREES” on it.
+
+
+Bill:
+Whoever said that nothing was impossible obviously never tried slamming a revolving door.
