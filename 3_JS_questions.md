@@ -48,39 +48,39 @@ Examples of Throttling and Debouncing
 
 
 
-**Responses:**
+##Responses:
 
-*Bill:*
+**Bill:**
 >Thanks for these good examples of JS interview questions. I like how you emphasized understanding JS fundamentals.
 >Regarding Question #2 (looping), just using let and const would make the code more readable and safe.
 >Regarding Question #3 (debouncing), while it’s a useful exercise to make a debouncer and it’s only a few lines of code, I’d recommend just using a micro-library for it, to reduce testing surface area and save time.
 
 
-*Jessica:*
+**Jessica:**
 >Hey :-) thanks for sharing!
 
 >I actually wasn’t asked one of the questions in my last interview, but instead we went on to discuss prototypes which was also fun!
 >Btw. the delayed print of i should also work with .bind(). Haven’t tested it, but if i’m not mistaken setTimeout(console.log.bind(undefined, ‘Print i: ’ + i), 3000);
 >should also do the trick.
 
-*John:*
+**John:**
 >Such a good read.
 
 
 
-*Dylan:*
+**Dylan:**
 >Doesn’t expecting the unexpected make the unexpected expected?
 
 
 
-*Soros:*
+**Soros:**
 >Man is the only living being who cuts trees, makes paper, and writes “SAVE TREES” on it.
 
 
-*Bill:*
+**Bill:**
 >Whoever said that nothing was impossible obviously never tried slamming a revolving door.
 
 
 
-*Shon:*
+**Shon:**
 >For Sale: Parachute. Only used once, never opened, small stain.
