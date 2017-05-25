@@ -7,7 +7,7 @@
 class Fighter {
 
     // якщо значення power або health не будуть задані, тоді вони рівні = 1
-    constructor(name, power = 1, health = 1) {
+    constructor(name = 'noname', power = 1, health = 1) {
         this.name = name;
         this.power = power;
         this.health = health;
@@ -40,10 +40,11 @@ class ImprovedFighter extends Fighter {
     }
 }
 
-let fighter = new Fighter('Superman', 10, 100);
-let improvedFighter = new ImprovedFighter('Batman', 10, 100);
+let fighter = new Fighter('Superman', 10, 200);
+let improvedFighter = new ImprovedFighter('Batman', 10, 200);
 
-let fight = (fighter, improvedFighter, ...point) => {
+// додано параметр deathFight, який визначає чи має тривати бій до смерті одного гравця чи просто до закінчення значень в масиві point
+let fight = (fighter, improvedFighter, deathFight,  ...point) => {
 
     // по рандому визначаємо хто б`є перший
     let whoseHit = Math.round(Math.random());
@@ -51,23 +52,39 @@ let fight = (fighter, improvedFighter, ...point) => {
 
     while (fighter.isAlive() && improvedFighter.isAlive()) {
 
-
         if (whoseHit) {
             fighter.hit(improvedFighter, point[i]);
         } else {
-            improvedFighter.doubleHit(fighter, point[i]);
+            // по рандому визначаємо чи наносить improvedFighter подвійний удар чи простий
+            if (Math.round(Math.random())) {
+                improvedFighter.doubleHit(fighter, point[i]);
+            } else {
+                improvedFighter.hit(fighter, point[i]);
+            }
         }
-
+        console.log(point[i]);
         whoseHit = !whoseHit;
 
-        // якщо значень point буде замало, беремо значення з початку масиву point, тобто зациклюємо масив point
+        // якщо бій має тривати до смерті одного гравця і значень point буде замало, беремо значення з початку масиву point, тобто зациклюємо масив point
         i++;
-        if (i == point.length ) {
+        if (deathFight && i == point.length ) {
             i = 0;
+        }
+
+        if (!deathFight && i == point.length ) {
+            break;
         }
     }
 
-    console.log(`${fighter.name} health : ${fighter.health},  ${improvedFighter.name} health : ${improvedFighter.health}`);
+    if (fighter.health == improvedFighter.health) {
+        console.log(`Бій закінчився нічийним результатом. ${fighter.name} health : ${fighter.health},  ${improvedFighter.name} health : ${improvedFighter.health}`);
+    }
+    if (fighter.health < improvedFighter.health) {
+        console.log(`Бій виграв ${improvedFighter.name}.  ${fighter.name} health : ${fighter.health},  ${improvedFighter.name} health : ${improvedFighter.health}`);
+    }
+    if (fighter.health > improvedFighter.health) {
+        console.log(`Бій виграв ${fighter.name}.  ${fighter.name} health : ${fighter.health},  ${improvedFighter.name} health : ${improvedFighter.health}`);
+    }
 }
 
-fight(fighter, improvedFighter, 3, 2, 4);
+fight(fighter, improvedFighter, true, 3, 4, 5, 2);
