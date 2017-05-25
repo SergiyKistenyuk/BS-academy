@@ -6,7 +6,7 @@
 
 class Fighter {
 
-    // якщо в power або health не будуть задані, тоді вони рівні = 1
+    // якщо значення power або health не будуть задані, тоді вони рівні = 1
     constructor(name, power = 1, health = 1) {
         this.name = name;
         this.power = power;
