@@ -18,7 +18,7 @@ class Fighter {
             // damage не може бути більше ніж health, тому в такому разі прирівнюємо damage до health
             this.health = 0;
         } else {
-            this.health = this.health - damage;
+            this.health -= damage;
         }
         console.log(`${this.name} health:  ${this.health}`);
     }
