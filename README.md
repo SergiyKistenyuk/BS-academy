@@ -76,7 +76,7 @@ Query params: id - ID повідомлення.
 Повертає список всіх повідомлень з даним ID.
 
 #### /api/message/:id
-Method: POST.
+Method: POST. 
 
 Query params: id - ID повідомлення.
 
