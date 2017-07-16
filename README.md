@@ -13,11 +13,14 @@
 
 #### /api/user/
 Method: GET.
+
 Повертає список всіх користувачів.
 
 #### /api/user/:id
 Method: GET.
+
 Query params: id - ID користувачa.
+
 Повертає список користувача з даним ID.
 
 #### /api/user/:id
