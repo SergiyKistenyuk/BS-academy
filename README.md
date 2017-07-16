@@ -28,7 +28,8 @@ Method: POST.
 
 Query params: id - ID користувачa.
 
-Request body: id - ID користувачa.
+Request body: 
+	      id - ID користувачa.
 
 	      name - ім'я користувачa.
 	      
